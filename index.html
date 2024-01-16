@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: 0px;
+        }
+        .main{
+            width: 100%;
+            height: 100%;
+            /* border: 1px groove black; */
+        }
+        .Nbar{
+            width: 100%;
+            height: 40px;
+            /* border: 2px solid rebeccapurple; */
+            display: flex;
+            justify-content: space-around;
+            padding-top:5px ;
+        }
+        .hed{
+            
+            display: flex;
+            justify-content: right;
+            gap: 30px;
+            background-color: rgb(250, 220, 230);
+        }
+        .call{
+            width: 110px;
+            border: 1px groove red;
+            background-color: red;
+            
+        }
+        .logo{
+            width: 80vh;
+            height: 50px;
+            border: 1px solid black;
+            background-color: #0c0303;
+            background-image: 100% 100%;
+            
+        }
+        .logo img{
+            background-image: cover;
+        }
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.thre{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+.txt{
+    width: 60vh;
+    height: 50vh;
+    margin-top: 15vh;
+    margin-left: 30vh;
+}
+.photo{
+    width: 90vh;
+    height: 80vh;
+    background-image: url(van.jpg);
+    background-size: 100% 100%;
+    margin-right: 10vh;
+    
+}
+.line{
+    width: 50px;
+    border: 3px solid red;
+    color: red;
+   border-radius: 20px;
+   
+}
+.Home:hover{
+    color: blue;
+    border-bottom: 3px groove red;
+}
+.or:hover{
+    color: blue;
+    border-bottom: 3px groove red;
+}
+.os:hover{
+    color: blue;
+    border-bottom: 3px groove red;
+}
+.About:hover{
+    color: blue;
+    border-bottom: 3px groove red;
+}
+.contact:hover{
+    color: blue;
+    border-bottom: 3px groove red;
+}
+.sqr:hover{
+    color: blue;
+    border-bottom: 3px groove red;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="hed">
+            <div><a href="https://www.facebook.com/webential/"><i class="fa-brands fa-facebook" style="color: #0c0303;"></i></a></div>
+            <div><a href="https://www.instagram.com/teamwebential/"><i class="fa-brands fa-instagram" style="color: #0c0303;"></i></a></div>
+            <div class="call"><a href="https://www.webential.com/contact-us" style="text-decoration: none; color: aliceblue;"><i class="fa-solid fa-phone" ></i>Call Us Now</a></div>
+        </div>
+        <div class="Nbar">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <div class="logo"><img src="llg.png"></div>
+            <div class="Home">Home</div>
+            <div class="os">Our Stocks<i class="fa-solid fa-angle-down" style="color: rgb(11, 10, 10);"></i></div>
+            <div class="or">Our Range<i class="fa-solid fa-angle-down" style="color: rgb(11, 10, 10);"></i></div>
+            <div class="About">About Us</div>
+            <div class="contact">Contact Us<i class="fa-solid fa-angle-down" style="color: rgb(8, 7, 7);"></i></div>
+            <div class="sqr"><i class="fa-solid fa-table-cells-large" style="color: #060505;"></i></div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Search<i class="fa-solid fa-magnifying-glass" style="color: rgb(183, 179, 179);"></i></a>
+            <a href="#">Type<i class="fa-solid fa-angle-down" style="color: rgb(183, 179, 179);"></i></a>
+            <a href="#">Make<i class="fa-solid fa-angle-down" style="color: rgb(183, 179, 179);"></i></a>
+            <a href="#">New or Used<i class="fa-solid fa-angle-down" style="color: rgb(183, 179, 179);"></i></a>
+            <a href="#">Location<i class="fa-solid fa-angle-down" style="color: rgb(183, 179, 179);"></i></a>
+          </div>
+          <div class="thre">
+          <div class="txt">
+            <div class="line"></div>
+            <div><h1 style="margin-top: 5vh;">Your Next Adventure With <i style="color: red;">Style</i></h1></div>
+            <div style="size: 25px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+          </div>
+          <div class="photo"></div>
+        </div>
+       
+    </div>
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+</body>
+</html>
